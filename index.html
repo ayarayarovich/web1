@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1" name="viewport"/>
+    <title>Web 1</title>
+
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Rubik', sans-serif;
+        }
+
+        section:not(:last-child) {
+            margin-bottom: 3rem;
+        }
+
+        #section-fragment {
+            width: 100%;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #0e0741;
+            color: #ffffff;
+        }
+
+        .image {
+            max-width: 100%;
+            height: 150px;
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="content">
+    <section id="section-links">
+        <h2>Ссылки</h2>
+        <ol>
+            <li>
+                <a href="http://example.com/" target="_blank">Абсолютная гиперссылка на главную страницу сайта example.com;</a>
+            </li>
+            <li>
+                <a href="https://example.com/" target="_blank">абсолютная гиперссылка на главную сайта example.com в протоколе https</a>
+            </li>
+            <li>
+                <a href="ftp://ftp.gnu.org/README" target="_blank">Ссылка на файл на сервере FTP без авторизации</a>
+            </li>
+            <li>
+                <a href="ftp://demo:password@test.rebex.net/readme.txt" target="_blank">Ссылка на файл на сервере FTP с авторизацией</a>
+            </li>
+            <li>
+                <a href="https://www.jetbrains.com/fleet/#collaborative" target="_blank">Ссылка на фрагмент страницы некоторого сайта</a>
+            </li>
+            <li>
+                <a href="#section-fragment">Ссылка на фрагмент текущей страницы</a>
+            </li>
+            <li>
+                <a href="https://example.com/?param1=foo&param2=bar" target="_blank">Ссылка с двумя параметрами в URL</a>
+            </li>
+            <li>
+                Список ссылок основной навигации сайта с подписями title
+                <ul>
+                    <li><a href="/about" title="О нас">О нас</a></li>
+                    <li><a href="/pricing" title="Цены">Цены</a></li>
+                    <li><a href="/catalog" title="Каталог">Каталог</a></li>
+                    <li><a href="/contacts" title="Контакты">Контакты</a></li>
+                </ul>
+            </li>
+            <li>
+                <a>Ссылка без href</a>
+            </li>
+            <li>
+                <a href="">Ссылка с пустым href</a>
+            </li>
+            <li>
+                <a href="" rel="nofollow">Ссылка, по которой запрещен переход поисковикам</a>
+            </li>
+            <!--noindex-->
+            <li>
+                <a href="">Запрещенную для индексации поисковиками</a>
+            </li>
+            <!--/noindex-->
+            <li>
+                <p>
+                    Контекстную в тексте <a href="https://obrazovaka.ru/russkiy-yazyk/abzac-opredelenie.html" target="_blank">абзаца</a>.
+                </p>
+            </li>
+            <li>
+                <a href="https://images.yandex.ru" target="_blank">
+                    <img alt="Какой-то цветок" class="image" src="/static/image.jpg">
+                </a>
+            </li>
+            <li>
+                <map name="jujutsu_kaisen">
+                    <area alt="Кугисаки"
+                          coords="3,49,61,121"
+                          href="https://jujutsu-kaisen.fandom.com/wiki/Nobara_Kugisaki"
+                          shape="rect"
+                          target="_blank"
+                          title="Кугисаки">
+                    <area alt="Итадори"
+                          coords="94,0,163,72"
+                          href="https://jujutsu-kaisen.fandom.com/wiki/Yuji_Itadori"
+                          shape="rect"
+                          target="_blank"
+                          title="Итадори">
+                    <area alt="Фушигуро Мэгуми"
+                          coords="203,40,40"
+                          href="https://jujutsu-kaisen.fandom.com/wiki/Megumi_Fushiguro"
+                          shape="circle"
+                          target="_blank"
+                          title="Фушигуро Мэгуми">
+                </map>
+                <img alt="Магическая битва!"
+                     class="image"
+                     src="static/image_with_maps.jpg"
+                     style="height: 150px"
+                     usemap="#jujutsu_kaisen">
+            </li>
+            <li>
+                <a href="./another_page_in_current_directory.html">Относительная на страницу в текущем каталоге</a>
+            </li>
+            <li>
+                <a href="/about">Относительная на страницу в каталоге about</a>
+            </li>
+            <li>
+                <a href="../another_page.html">Относительная на страницу в каталоге уровнем выше текущего</a>
+            </li>
+            <li>
+                <a href="../../another_another_page.html">Относительная на страницу в каталоге двумя уровнями выше</a>
+            </li>
+            <li>
+                <a href="/">Сокращенная на главную</a>
+            </li>
+            <li>
+                <a href="./inside/inside.html">Сокращенная на внутреннюю</a>
+            </li>
+        </ol>
+    </section>
+
+    <section id="section-form">
+        <h2>Форма</h2>
+        <form action="/thanks-for-registration.html" method="post">
+            <label>
+                Имя <br>
+                <input name="field-name" placeholder="Введите ваше имя" required type="text">
+            </label> <br>
+
+            <label>
+                Email <br>
+                <input name="field-email" placeholder="Введите вашу почту" required type="email">
+            </label> <br>
+
+            <label>
+                Дата рождения <br>
+                <input name="field-birthday" required type="date">
+            </label> <br>
+
+            Пол <br>
+            <label>
+                <input checked name="radio-group-gender" required type="radio" value="male">
+                Мужской
+            </label>
+            <label>
+                <input name="radio-group-gender" required type="radio" value="female">
+                Женский
+            </label> <br>
+
+            Количество конечностей <br>
+            <label>
+                <input checked name="radio-group-limbs-number" required type="radio" value="0"> 0
+            </label> <br>
+            <label>
+                <input name="radio-group-limbs-number" required type="radio" value="1"> 1
+            </label> <br>
+            <label>
+                <input name="radio-group-limbs-number" required type="radio" value="2"> 2
+            </label> <br>
+            <label>
+                <input name="radio-group-limbs-number" required type="radio" value="3"> 3
+            </label> <br>
+            <label>
+                <input name="radio-group-limbs-number" required type="radio" value="4"> 4
+            </label> <br>
+            <label>
+                <input name="radio-group-limbs-number" required type="radio" value="5"> 5
+            </label> <br>
+
+            <label>
+                Сверхспособности <br>
+                <select multiple name="select-superpowers" required>
+                    <option value="immortality">Бессмертие</option>
+                    <option value="noclip">Прохождение сквозь стены</option>
+                    <option value="levitation">Левитация</option>
+                </select>
+            </label> <br>
+
+            <label>
+                Биография <br>
+                <textarea cols="30" name="field-biography" placeholder="Введите вашу биографию" rows="5"></textarea>
+            </label> <br>
+
+            <label>
+                <input name="checkbox-agreement" required type="checkbox">
+                С контрактом ознакомлен(a)
+            </label> <br>
+
+            <input type="submit" value="Отправить">
+        </form>
+    </section>
+
+    <section id="section-fragment">
+        <h2>Тот самый фрагмент...</h2>
+    </section>
+</div>
+</body>
+
+</html>
